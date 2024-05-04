@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+  background-color:lightslategray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.boton{
+    display: block;
+    background-color:rgb(237, 10, 233);
+    color: black;
+    margin: 20px auto;
+    width: 160px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 20px;
+}
+.boton:hover{
+    background-color: rgb(120, 10, 130);
+    color: rgb(34, 1, 65);
+}
+.boton:active{
+    background-color: yellow;
+    color: chocolate;
+}
+
+#p1:target{
+    background-color: rgb(235, 81, 81);
+}
+
+#p2:target{
+    background-color: aqua;
+}
+
+#p3:target{
+    background-color: rgb(162, 80, 239);
+}
+
+.textos1, .textos2{
+    background-color: rgb(124, 245, 249);
+    width: max-content;
+    padding: 20px 50px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/*.textos1 p:first-child */
+/*.textos1 p:last-child */
+/*.textos1 p:nth-child(odd) impar */
+/*.textos1 p:nth-child(even) par*/
+/*.textos1 p:nth-child(3) fila específica*/
+/*.textos1 p:nth-last-child(n+3) de la fila 1 hacia abajo*/
+/*.textos1 p:nth-child(n+3) de la fila 3 hacia abajo*/
+
+.textos1 p:nth-child(n+4), .textos2 p:nth-last-child(n+4) {
+background-color: rgb(111, 111, 233);
+color: rgb(14, 2, 26);
+}
+
+/* Tabla */
+
+.tabla{
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.tabla th, td{
+    border: 2px solid rgb(9, 9, 181);
+    padding: 10px;
+}
+
+.tabla thead {
+    background-color: rgb(41, 230, 230);
+    color: rgb(6, 6, 0);
+}
+.tabla tr:nth-child(ever), .tabla td:nth-child(ever){
+    background-color: black;
+    color: aquamarine;
+}
+
+.nombre{
+    display: flex;
+    margin: 40px auto;
+    justify-content: center;
+    list-style: none;
+
+}
+.nombre li{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.nombre li:nth-child(odd){
+    background-color: chartreuse;
+    color: chocolate;
+    padding: 10px;
+    text-shadow:  5px 5px 7px gray;
+}
+
+.nombre li:nth-child(even){
+    background-color: rgb(92, 58, 204);
+    color: chartreuse;
+    padding: 10px;
+    text-shadow:  5px 5px 7px gray;
+}
+.lista{
+    width: max-content;
+    margin: 30px auto;
+    list-style: none;
+    background-color: rgb(173, 239, 106);
+    padding: 20px;
+}
+.lista li::before{
+   content:"❤️" ;
+   margin-right: 15px;
+   margin-left: 15px;
+   font-size: 14px;
+}
+
+.textos2 p::before{
+    content: "✅";
+}
+
+.cuadro{
+    background-color: rgb(106, 209, 224);
+    width: 45%;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: center;
+    position: relative;
+}
+
+.cuadro::before{
+    width: 80px;
+    height: 30px;
+    content: "🤎🐱🖤";
+    top: calc(50% - 15px);
+    right: calc(100% - 15px);
+    position: absolute;
+}
+.cuadro::after{
+    width: 80px;
+    height: 30px;
+    content: "🤎🐱🖤";
+    top: calc(50% - 15px);
+    left: calc(100% - 15px);
+    position: absolute;
+}
+
+@media screen and (max-width:500px){
+    .cuadro::after, .cuadro::before {
+        content: "";
+    }
+    .cuadro{
+      width: 100%;
+    }
+}
+/*Formulario*/
+.formu{
+    margin: 50px 20px;
+}
+
+label{
+    background-color: rgb(180, 113, 244);
+    padding: 10px;
+    color: black;
+}
+
+.formu:checked + label{
+    background-color: blue;
+}
